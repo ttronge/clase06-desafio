@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT ||8080;
 
 // utils
 const productos = JSON.parse(fs.readFileSync('./productos.txt'))
